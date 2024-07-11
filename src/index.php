@@ -3,14 +3,14 @@
 // phpinfo();
 
 // Configuração da conexão com o banco de dados
-$host = "localhost";
+$host = "mysql_container";
 $dbname = "ifsp";
-$username = "seu_usuario";
-$password = "sua_senha";
+$username = "florisvaldo";
+$password = "12345678";
 
 try {
     // Cria a conexão com o banco de dados
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+$pdo = new PDO("mysql:host=$host;port=3306;dbname=$dbname", $username, $password);
     
     // Define o modo de erro para exceção
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
